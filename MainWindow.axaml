@@ -3,6 +3,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:wxRobotApp="clr-namespace:wxRobotApp"
+        xmlns:assets="clr-namespace:wxRobotApp.Assets"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="wxRobotApp.MainWindow"
         Icon="/Assets/favicon.ico"
@@ -11,18 +12,14 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="File">
-                <MenuItem Header="Settings" Click="OnSettingsClick"/>
+                <MenuItem Header="{x:Static assets:Resources.Settings}" Click="OnSettingsClick"/>
             </MenuItem>
         </Menu>
         <StackPanel>
+            
             <Button Name="ClickMeButton" Content="Click Me" HorizontalAlignment="Center" Margin="10" Click="OnClickMeButton"/>
             <TextBox Name="OutputTextBox" Height="100" Margin="10" AcceptsReturn="True" IsReadOnly="True"/>
-            <ListBox Name="WeChatListBox"
-   
-   
-                
-                    
-                     >
+            <ListBox Name="WeChatListBox" >
                 <ListBox.ItemTemplate>
                     <DataTemplate  x:DataType="wxRobotApp:WeChatProcessInfo"       >
                         <StackPanel Orientation="Horizontal" Spacing="10">

@@ -9,7 +9,7 @@ namespace wxRobotApp
     public partial class SettingsWindow : Window
     {
         private string _configFilePath;
-        
+
         public SettingsWindow()
         {
             InitializeComponent();
