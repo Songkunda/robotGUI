@@ -2,7 +2,7 @@ using System.Globalization;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-
+using wxRobotApp.Utils;
 
 namespace wxRobotApp;
 
@@ -11,6 +11,9 @@ public partial class App : Application
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
+
+        // 初始化配置文件
+        // ConfigurationManager.Instance;
     }
 
     public override void OnFrameworkInitializationCompleted()
