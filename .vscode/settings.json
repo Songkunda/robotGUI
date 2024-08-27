@@ -1,0 +1,26 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "explorer.fileNesting.patterns": {
+        "*.axaml": "${capture}.axaml,${capture}.axaml.cs"
+    },
+    "files.exclude": {
+        "bin": true,
+        "obj": true
+    },
+    "files.associations": {
+        "*.axaml": "xml"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "DotJoshJohnson.xml"
+    },
+    "material-icon-theme.files.associations": {
+        "*.axaml": "xml"
+    },
+    "material-icon-theme.files.folders.associations": {
+        "axaml": "xml"
+    },
+    "material-icon-theme.activeIconPack": "nest",
+    "material-icon-theme.fileNesting.patterns": {
+        "*.axaml": "${basename}.axaml.cs"
+    }
+}
