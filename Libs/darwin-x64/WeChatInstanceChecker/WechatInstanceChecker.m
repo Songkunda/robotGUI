@@ -13,7 +13,7 @@ static void __attribute__((constructor)) instace(void) {
   SEL selector = NSSelectorFromString(@"HasWechatInstance");
   Method method = class_getInstanceMethod(class, selector);
   IMP imp = imp_implementationWithBlock(^(id self) {
-    NSLog("imp_implementationWithBlock")
+    NSLog(@"imp_implementationWithBlock");
     return 0; // 永远返回0
   });
   class_replaceMethod(class, selector, imp, method_getTypeEncoding(method));
