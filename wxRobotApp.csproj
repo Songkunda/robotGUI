@@ -10,7 +10,15 @@
     <OutputPath>bin\Debug\net8.0\</OutputPath>
     <RuntimeIdentifiers>osx-x64;win-x64</RuntimeIdentifiers>
   </PropertyGroup>
- <ItemGroup>
+  <PropertyGroup Condition=" '$(RuntimeIdentifier)' == 'win-x64' ">
+    <DefineConstants>WINDOWS</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RuntimeIdentifier)' == 'osx-x64' ">
+    <DefineConstants>MACOS</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
   <ItemGroup>
@@ -35,7 +43,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
- 
+
   <ItemGroup>
     <EmbeddedResource Update="Assets\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -8,7 +8,7 @@
         "obj": true
     },
     "files.associations": {
-        "*.axaml": "xml"
+        "*.axaml": "AXAML"
     },
     "[xml]": {
         "editor.defaultFormatter": "DotJoshJohnson.xml"
@@ -22,5 +22,11 @@
     "material-icon-theme.activeIconPack": "nest",
     "material-icon-theme.fileNesting.patterns": {
         "*.axaml": "${basename}.axaml.cs"
+    },
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp"
+    },
+    "[objective-c]": {
+        "editor.defaultFormatter": "xaver.clang-format"
     }
 }
