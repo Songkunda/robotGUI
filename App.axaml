@@ -1,11 +1,14 @@
 <Application xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="wxRobotApp.App"
-             
-             RequestedThemeVariant="Default">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
-
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="wxRobotApp.App"
+    xmlns:semi="https://irihi.tech/semi">
+    <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
     <Application.Styles>
-        <FluentTheme />
+        <semi:SemiTheme Locale="zh-cn" />
+    </Application.Styles>
+    <Application.Styles>
+        <StyleInclude Source="avares://Semi.Avalonia.ColorPicker/Index.axaml" />
+        <StyleInclude Source="avares://Semi.Avalonia.DataGrid/Index.axaml" />
+        <StyleInclude Source="avares://Semi.Avalonia.TreeDataGrid/Index.axaml" />
     </Application.Styles>
 </Application>

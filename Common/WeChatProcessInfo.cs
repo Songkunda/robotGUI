@@ -1,4 +1,4 @@
-namespace wxRobotApp;
+namespace wxRobotApp.Common;
 
 public class WeChatProcessInfo
 {

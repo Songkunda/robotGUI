@@ -9,6 +9,7 @@
 @implementation NSObject (MultipleInstances)
 
 static void __attribute__((constructor)) instace(void) {
+  NSLog(@"instace");
   Class class = object_getClass(NSClassFromString(@"CUtility"));
   SEL selector = NSSelectorFromString(@"HasWechatInstance");
   Method method = class_getInstanceMethod(class, selector);

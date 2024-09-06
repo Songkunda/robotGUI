@@ -1,14 +1,17 @@
 {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": true,
     "explorer.fileNesting.patterns": {
-        "*.axaml": "${capture}.axaml,${capture}.axaml.cs"
+        "*.axaml": "$(basename).axaml.cs",
+        "*.axaml.cs": "$(basename).axaml.model.cs"
     },
     "files.exclude": {
         "bin": true,
         "obj": true
     },
     "files.associations": {
-        "*.axaml": "AXAML"
+        "*.axaml": "xml"
     },
     "[xml]": {
         "editor.defaultFormatter": "DotJoshJohnson.xml"
@@ -16,17 +19,34 @@
     "material-icon-theme.files.associations": {
         "*.axaml": "xml"
     },
-    "material-icon-theme.files.folders.associations": {
-        "axaml": "xml"
-    },
     "material-icon-theme.activeIconPack": "nest",
-    "material-icon-theme.fileNesting.patterns": {
-        "*.axaml": "${basename}.axaml.cs"
-    },
     "[csharp]": {
         "editor.defaultFormatter": "ms-dotnettools.csharp"
     },
     "[objective-c]": {
         "editor.defaultFormatter": "xaver.clang-format"
-    }
+    },
+    "[AXAML]": {
+        "editor.defaultFormatter": "DotJoshJohnson.xml"
+    },
+    "xmlTools.splitAttributesOnFormat": true,
+    "xmlTools.xqueryExecutionInputSearchPattern": "**/*.xml,**/*.axaml",
+    "xmlTools.removeCommentsOnMinify": true,
+    "xmlTools.enforcePrettySelfClosingTagOnFormat": true,
+    "xmlTools.enableXmlTreeViewCursorSync": true,
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "xmlTools.splitXmlnsOnFormat": true,
+    "xmlTools.xqueryExecutionArguments": [
+        "-xquery",
+        "$(script)",
+        "-in",
+        "$(input)",
+        "-out",
+        "$(input).output.xml"
+    ],
+    "fileNestingUpdater.autoUpdate": true,
+    "explorer.sortOrder": "mixed",
+    "fileNestingUpdater.upstreamRepo": "Songkunda/vscode-file-nesting-config"
 }

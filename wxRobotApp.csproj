@@ -17,28 +17,47 @@
   <PropertyGroup Condition=" '$(RuntimeIdentifier)' == 'osx-x64' ">
     <DefineConstants>MACOS</DefineConstants>
   </PropertyGroup>
-
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="11.1.0" />
-    <PackageReference Include="Avalonia.Desktop" Version="11.1.0" />
-    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.1.0" />
-    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.1.0" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="11.1.0" />
-    <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.1.0" />
+    <PackageReference Include="Avalonia"
+      Version="11.1.0" />
+    <PackageReference Include="Avalonia.Desktop"
+      Version="11.1.0" />
+    <PackageReference Include="Avalonia.Themes.Fluent"
+      Version="11.1.0" />
+    <PackageReference Include="Avalonia.Fonts.Inter"
+      Version="11.1.0" />
+    <PackageReference Include="Avalonia.ReactiveUI"
+      Version="11.1.0" />
+    <PackageReference Include="Avalonia.Controls.DataGrid"
+      Version="11.1.0" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.1.0" />
+    <PackageReference Condition="'$(Configuration)' == 'Debug'"
+      Include="Avalonia.Diagnostics"
+      Version="11.1.0" />
+    <PackageReference Include="Semi.Avalonia"
+      Version="11.1.0.3" />
+    <PackageReference Include="Semi.Avalonia.ColorPicker"
+      Version="11.1.0.3" />
+    <PackageReference Include="Semi.Avalonia.DataGrid"
+      Version="11.1.0.3" />
+    <PackageReference Include="Semi.Avalonia.TreeDataGrid"
+      Version="11.0.10" />
 
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Newtonsoft.Json"
+      Version="13.0.3" />
+    <PackageReference Include="CommunityToolkit.Mvvm"
+      Version="8.2.2" />
 
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.7" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.7">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite"
+      Version="8.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design"
+      Version="8.0.7">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>

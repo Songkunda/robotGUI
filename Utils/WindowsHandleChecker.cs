@@ -39,7 +39,7 @@ public class WindowsHandleChecker
 
         for (int i = 0; i < handleCount; i++)
         {
-            var handleInfo = Marshal.PtrToStructure<SystemHandleInformation>(handleEntryPtr);
+            var handleInfo = Marshal.PtrToStructure<SystemHandleInformationStruct>(handleEntryPtr);
 
             if (handleInfo.ProcessId == pid)
             {
@@ -65,7 +65,7 @@ public class WindowsHandleChecker
                 }
             }
 
-            handleEntryPtr += Marshal.SizeOf(typeof(SystemHandleInformation)); // 移动到下一个句柄条目
+            handleEntryPtr += Marshal.SizeOf(typeof(SystemHandleInformationStruct)); // 移动到下一个句柄条目
         }
 
         Marshal.FreeHGlobal(handleInfoPtr);
@@ -88,8 +88,9 @@ public class WindowsHandleChecker
     [DllImport("kernel32.dll", SetLastError = true)]
     private static extern bool DuplicateHandle(IntPtr hSourceProcessHandle, IntPtr hSourceHandle, IntPtr hTargetProcess, out IntPtr lpTargetHandle, uint dwDesiredAccess, bool bInheritHandle, uint dwOptions);
 
+    // 这里是唯一的 SystemHandleInformation 结构体定义
     [StructLayout(LayoutKind.Sequential)]
-    private struct SystemHandleInformation
+    private struct SystemHandleInformationStruct
     {
         public int ProcessId;
         public byte ObjectTypeNumber;
