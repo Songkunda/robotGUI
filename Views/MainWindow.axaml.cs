@@ -1,6 +1,8 @@
+using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using wxRobotApp.Models;
+using wxRobotApp.ViewModels;
+
 
 namespace wxRobotApp.Views
 {
@@ -9,8 +11,7 @@ namespace wxRobotApp.Views
         public MainWindow()
         {
             InitializeComponent();
-            // 设置DataContext为MainViewModel
-            DataContext = new MainViewModel();
+             DataContext = new MainWindowViewModel(); 
         }
 
         private void OnSettingsClick(object? sender, RoutedEventArgs e)
@@ -18,6 +19,11 @@ namespace wxRobotApp.Views
             // 打开设置窗口
             var settingsWindow = new SettingsWindow();
             settingsWindow.ShowDialog(this);
+        }
+
+        void OnDetailsClick(object? sender, RoutedEventArgs e)
+        {
+            new DetailsWindow().ShowDialog(this);
         }
     }
 }

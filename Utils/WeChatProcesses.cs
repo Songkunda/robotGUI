@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using wxRobotApp.Common;
@@ -7,8 +8,9 @@ namespace wxRobotApp.Utils
 {
     public class WeChatProcesses
     {
-        void ScanWeChatProcesses()
+        static public List<WeChatProcessInfo> ScanWeChatProcesses()
         {
+            var reWeChatProcessInfos = new List<WeChatProcessInfo>();
             var processes = Process.GetProcessesByName("WeChat");
             foreach (var process in processes)
             {
@@ -21,17 +23,18 @@ namespace wxRobotApp.Utils
                     MessagePort = GetMessagePort(process)
                 };
 
-                // Dispatcher.UIThread.Invoke(() => WeChatProcesses.Add(wechatInfo));
+                reWeChatProcessInfos.Add(wechatInfo);
             }
+            return reWeChatProcessInfos;
 
         }
-        private string GetWeChatVersion(string? wechatPath)
+        static private string GetWeChatVersion(string? wechatPath)
         {
             if (wechatPath == null) return "Unknown";
             return FileVersionInfo.GetVersionInfo(wechatPath).FileVersion ?? "Unknown";
         }
 
-        private string CheckHelperDll(Process process)
+        static private string CheckHelperDll(Process process)
         {
             foreach (ProcessModule module in process.Modules)
             {
@@ -42,7 +45,7 @@ namespace wxRobotApp.Utils
             }
             return "Not Injected";
         }
-        private string[] GetProcessModules(Process process)
+        static private string[] GetProcessModules(Process process)
         {
             string[] modules = [];
             foreach (ProcessModule module in process.Modules)
@@ -53,12 +56,12 @@ namespace wxRobotApp.Utils
             return modules;
         }
 
-        private string GetWeChatId(Process process)
+        static private string GetWeChatId(Process process)
         {
             return "UnknownWeChatId";
         }
 
-        private int GetMessagePort(Process process)
+        static private int GetMessagePort(Process process)
         {
             return 0;
         }

@@ -5,7 +5,7 @@ using Avalonia.Interactivity;
 using Newtonsoft.Json.Linq;
 using wxRobotApp.Utils;
 
-namespace wxRobotApp
+namespace wxRobotApp.Views
 {
     public partial class SettingsWindow : Window
     {
