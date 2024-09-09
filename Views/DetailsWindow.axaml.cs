@@ -9,9 +9,6 @@ namespace wxRobotApp.Views
         {
             InitializeComponent();
         }
-        public DetailsWindow(WeChatProcessInfo processInfo) : this()
-        {
-            DataContext = processInfo;
-        }
+
     }
 }

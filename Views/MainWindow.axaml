@@ -11,29 +11,43 @@
     d:DesignHeight="450"
     d:DesignWidth="800">
 
-    <DockPanel>
+    <DockPanel LastChildFill="True">
+        <!-- Top Menu -->
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="App">
-                <MenuItem Header="Settings"
+            <MenuItem Header="Settings">
+                <MenuItem Header="Global Settings"
                     Click="OnSettingsClick">
                 </MenuItem>
             </MenuItem>
         </Menu>
-        <StackPanel>
-            <Button Content="开启自动注入" />
-            <Button Content="开启自动多开" />
+
+        <!-- Buttons Row -->
+        <StackPanel DockPanel.Dock="Top"
+            Orientation="Horizontal"
+            HorizontalAlignment="Center"
+            Margin="10">
+            <Button Content="开启自动注入"
+                Margin="5"
+                Click="OnAutoInjectClick" />
+            <Button Content="开启自动多开"
+                Margin="5" />
         </StackPanel>
 
-        <StackPanel>
-            <TextBlock Text="{Binding Hello}" />
-            <DataGrid ItemsSource="{Binding WeChatProcessInfos}">
-                <DataGrid.Columns >
-                    <DataGridTextColumn Header="Pid" Binding="{ReflectionBinding Path=Pid}"/>
-                    <DataGridTextColumn Header="MessagePort" Binding="{ReflectionBinding Path=MessagePort}" />
-                    <DataGridTextColumn Header="WeChatVersion" Binding="{ReflectionBinding Path=WeChatVersion}"/>
-                </DataGrid.Columns>
-            </DataGrid>
-        </StackPanel>
+        <!-- DataGrid Fills Remaining Space -->
+        <!-- PointerPressed="OnDetailsClick"   -->
+        <DataGrid IsReadOnly="True"
+            Margin="8"
+            ItemsSource="{Binding WeChatProcessInfos}"  Click="OnDetailsClick">
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="Pid"
+                    Binding="{Binding Pid}" />
+                <DataGridTextColumn Header="MessagePort"
+                    Binding="{Binding MessagePort}" />
+                <DataGridTextColumn Header="WeChatVersion"
+                    Binding="{Binding WeChatVersion}" />
+            </DataGrid.Columns>
+          
+        </DataGrid>
     </DockPanel>
 
 </Window>
