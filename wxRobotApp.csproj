@@ -46,9 +46,7 @@
       Version="11.1.0.3" />
     <PackageReference Include="Semi.Avalonia.TreeDataGrid"
       Version="11.0.10" />
-
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json"
       Version="13.0.3" />
@@ -62,7 +60,6 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
-
   <ItemGroup>
     <EmbeddedResource Update="Assets\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
