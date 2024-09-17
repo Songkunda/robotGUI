@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace wxRobotApp.Assets
+namespace WXRobotApp.Assets
 {
     using System;
 
@@ -34,7 +34,7 @@ namespace wxRobotApp.Assets
             {
                 if (object.Equals(null, resourceMan))
                 {
-                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("wxRobotApp.Assets.Resources", typeof(Resources).Assembly);
+                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("WXRobotApp.Assets.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -68,13 +68,21 @@ namespace wxRobotApp.Assets
                 return ResourceManager.GetString("Tools", resourceCulture) ?? "Tools";
             }
         }
-        public static string Langs
+        public static string Languages
         {
             get
             {
-                return ResourceManager.GetString("Langs", resourceCulture) ?? "Langs";
+                return ResourceManager.GetString("Languages", resourceCulture) ?? "EN/汉";
             }
-        }   
+        }
+        public static string MainWindowTitle
+        {
+            get
+            {
+                return ResourceManager.GetString("MainWindowTitle", resourceCulture) ?? "综合管理工具";
+            }
+        }
+        
 
 
     }

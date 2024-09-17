@@ -2,7 +2,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
 
-namespace wxRobotApp.Utils
+namespace WXRobotApp.Utils
 {
     public class ConfigurationManager
     {

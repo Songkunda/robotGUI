@@ -3,7 +3,7 @@ using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 
-namespace wxRobotApp.Views
+namespace WXRobotApp.Views
 {
     public partial class InjectDllWindow : Window
     {

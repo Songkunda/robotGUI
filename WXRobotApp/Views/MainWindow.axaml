@@ -1,0 +1,76 @@
+<Window xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:vm="using:WXRobotApp.ViewModels"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:assets="clr-namespace:WXRobotApp.Assets"
+  mc:Ignorable="d"
+  d:DesignWidth="800"
+  d:DesignHeight="450"
+  x:Class="WXRobotApp.Views.MainWindow"
+  x:DataType="vm:MainWindowViewModel"
+  Icon="/Assets/favicon.ico"
+  Title="{x:Static assets:Resources.MainWindowTitle}">
+
+  <Design.DataContext>
+    <!-- 这只为 IDE 中的预览器设置 DataContext，
+      要在运行时设置实际的 DataContext，请在代码中设置 DataContext 属性（参见 App.axaml.cs） -->
+
+    <vm:MainWindowViewModel />
+  </Design.DataContext>
+
+  <DockPanel LastChildFill="True">
+    <!-- Top Menu -->
+    <Menu DockPanel.Dock="Top">
+      <MenuItem Header="{x:Static assets:Resources.Settings}">
+        <MenuItem Header="Global Settings"
+          Click="OpenSettingsWithGlobalSettingsWindow">
+        </MenuItem>
+      </MenuItem>
+      <MenuItem Header="{x:Static assets:Resources.Tools}">
+        <MenuItem Header="Inject Dlls"
+          Click="OpenToolsWithInjectToolWindow">
+        </MenuItem>
+
+      </MenuItem>
+
+      <MenuItem Header="{x:Static assets:Resources.Languages}">
+        <MenuItem Header="中文"
+          Click="ChangedLanguagesWithZHCN">
+        </MenuItem>
+
+      </MenuItem>
+
+    </Menu>
+
+    <!-- Buttons Row -->
+    <StackPanel DockPanel.Dock="Top"
+      Orientation="Horizontal"
+      HorizontalAlignment="Center"
+      Margin="10">
+      <Button Content="开启自动注入"
+        Margin="5"
+        Click="OpenAutoInjectWorker" />
+      <Button Content="开启自动多开"
+        Margin="5" />
+    </StackPanel>
+
+    <!-- DataGrid Fills Remaining Space -->
+    <!-- PointerPressed="OnDetailsClick"   -->
+    <DataGrid IsReadOnly="True"
+      Margin="8"
+      ItemsSource="{Binding WeChatProcessInfos}"
+      SelectionMode="Single">
+      <DataGrid.Columns >
+        <DataGridTextColumn Header="Pid"
+          Binding="{Binding Pid}" />
+        <DataGridTextColumn Header="MessagePort"
+          Binding="{Binding MessagePort}" />
+        <DataGridTextColumn Header="WeChatVersion"
+          Binding="{Binding WeChatVersion}" />
+      </DataGrid.Columns>
+    </DataGrid>
+  </DockPanel>
+
+
+</Window>

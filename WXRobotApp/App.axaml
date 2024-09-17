@@ -1,8 +1,15 @@
 <Application xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    x:Class="wxRobotApp.App"
-    xmlns:semi="https://irihi.tech/semi">
-    <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+    x:Class="WXRobotApp.App"
+    xmlns:semi="https://irihi.tech/semi"
+    xmlns:local="using:WXRobotApp"
+    RequestedThemeVariant="Default">
+    <!-- "Default" 主题变体遵循系统主题改变。其他可用选项是 "Dark" 或 "Light"。 -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator />
+    </Application.DataTemplates>
+
     <Application.Styles>
         <semi:SemiTheme Locale="zh-cn" />
     </Application.Styles>

@@ -1,7 +1,7 @@
 using System;
-using wxRobotApp.Common;
+using WXRobotApp.Common;
 
-namespace wxRobotApp.ViewModels;
+namespace WXRobotApp.ViewModels;
 
 public class DetailWindowViewModel : ViewModelBase
 {

@@ -3,9 +3,9 @@ using System;
 using System.IO;
 using Avalonia.Interactivity;
 using Newtonsoft.Json.Linq;
-using wxRobotApp.Utils;
+using WXRobotApp.Utils;
 
-namespace wxRobotApp.Views
+namespace WXRobotApp.Views
 {
     public partial class SettingsWindow : Window
     {

@@ -1,7 +1,7 @@
 using Avalonia.Controls;
-using wxRobotApp.Common;
+using WXRobotApp.Common;
 
-namespace wxRobotApp.Views
+namespace WXRobotApp.Views
 {
     public partial class DetailWindow : Window
     {

@@ -1,12 +1,12 @@
 ## run
 
 ```
-dotnet run
+dotnet run WXRobotApp
 ```
 
 ## build
 
 ```
-dotnet build
+dotnet build WXRobotApp
 
 ```

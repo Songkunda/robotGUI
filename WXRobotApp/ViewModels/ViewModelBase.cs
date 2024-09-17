@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace wxRobotApp.ViewModels;
+namespace WXRobotApp.ViewModels;
 
 public class ViewModelBase : ObservableObject
 {

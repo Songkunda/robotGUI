@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using wxRobotApp.Common;
+using WXRobotApp.Common;
 
-namespace wxRobotApp.Utils
+namespace WXRobotApp.Utils
 {
     public class WeChatProcesses
     {
