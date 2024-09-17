@@ -21,4 +21,11 @@
     <data name="Settings" xml:space="preserve">
         <value>Settings</value>
     </data>
+    <data name="Tools" xml:space="preserve">
+        <value>Tools</value>
+    </data>
+     <data name="Langs"
+        xml:space="preserve">
+        <value>EN/汉</value>
+    </data>
 </root>

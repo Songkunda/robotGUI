@@ -4,7 +4,7 @@
     Height="300"
     Title="WeChat Details"
     xmlns:vm="using:wxRobotApp.ViewModels"
-    x:Class="wxRobotApp.Views.DetailsWindow"
+    x:Class="wxRobotApp.Views.DetailWindow"
     x:DataType="vm:DetailWindowViewModel">
     <StackPanel Margin="10">
         <TextBlock Text="Details of WeChat Process"

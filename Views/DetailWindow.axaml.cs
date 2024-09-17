@@ -3,9 +3,9 @@ using wxRobotApp.Common;
 
 namespace wxRobotApp.Views
 {
-    public partial class DetailsWindow : Window
+    public partial class DetailWindow : Window
     {
-        public DetailsWindow()
+        public DetailWindow()
         {
             InitializeComponent();
         }
